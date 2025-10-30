@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Form with Validation</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #357ab8;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .success {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interactive Form with Validation</h1>
+
+  <form id="userForm" onsubmit="return validateForm()">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <span id="nameError" class="error"></span>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    <span id="emailError" class="error"></span>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter password">
+    <span id="passwordError" class="error"></span>
+
+    <label for="message">Message:</label>
+    <textarea id="message" rows="3" placeholder="Write your message..."></textarea>
+    <span id="messageError" class="error"></span>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="successMessage" class="success"></p>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+      let message = document.getElementById("message").value.trim();
+      
+      let valid = true;
+
+      // Clear previous error messages
+      document.getElementById("nameError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("passwordError").innerText = "";
+      document.getElementById("messageError").innerText = "";
+      document.getElementById("successMessage").innerText = "";
+
+      // Name validation
+      if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required.";
+        valid = false;
+      }
+
+      // Email validation
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required.";
+        valid = false;
+      } else if (!email.match(emailPattern)) {
+        document.getElementById("emailError").innerText = "Enter a valid email address.";
+        valid = false;
+      }
+
+      // Password validation
+      if (password === "") {
+        document.getElementById("passwordError").innerText = "Password is required.";
+        valid = false;
+      } else if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+        valid = false;
+      }
+
+      // Message validation
+      if (message === "") {
+        document.getElementById("messageError").innerText = "Message cannot be empty.";
+        valid = false;
+      }
+
+      // If all inputs are valid
+      if (valid) {
+        document.getElementById("successMessage").innerText = "Form submitted successfully!";
+      }
+
+      return false; // Prevent form submission for demo
+    }
+  </script>
+
+</body>
+</html>

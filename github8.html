@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form and Table</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    /* ===== FORM STYLING ===== */
+    form {
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #4a90e2;
+      outline: none;
+      box-shadow: 0 0 5px rgba(74,144,226,0.3);
+    }
+
+    input[type="submit"] {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #357ab8;
+    }
+
+    /* ===== TABLE STYLING ===== */
+    table {
+      width: 80%;
+      margin: 0 auto 50px;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4a90e2;
+      color: white;
+      font-size: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #eaf3ff;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #4a90e2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Styled Form and Table Example</h1>
+
+  <!-- ===== STYLED FORM ===== -->
+  <form>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="course">Select Course:</label>
+    <select id="course" name="course" required>
+      <option value="">--Select a course--</option>
+      <option value="html">HTML & CSS</option>
+      <option value="javascript">JavaScript</option>
+      <option value="python">Python</option>
+      <option value="c">C Programming</option>
+    </select>
+
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" name="feedback" placeholder="Write your feedback here..." rows="4"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- ===== STYLED TABLE ===== -->
+  <table>
+    <caption>Course Schedule</caption>
+    <tr>
+      <th>Day</th>
+      <th>Course</th>
+      <th>Time</th>
+      <th>Instructor</th>
+    </tr>
+    <tr>
+      <td>Monday</td>
+      <td>HTML & CSS</td>
+      <td>10:00 - 11:00 AM</td>
+      <td>Ms. Ananya</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>JavaScript</td>
+      <td>11:30 - 12:30 PM</td>
+      <td>Mr. Rahul</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td>Python</td>
+      <td>2:00 - 3:00 PM</td>
+      <td>Ms. Priya</td>
+    </tr>
+    <tr>
+      <td>Thursday</td>
+      <td>C Programming</td>
+      <td>3:30 - 4:30 PM</td>
+      <td>Mr. Kiran</td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshari U Shankar | Personal Webpage</title>
+
+  <!-- ===== CSS Styling ===== -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f3e5f5, #ce93d8);
+      color: #333;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #8e24aa;
+      color: white;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    /* ===== GENERAL SECTION STYLE ===== */
+    section {
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: white;
+      border-bottom: 2px solid rgba(255,255,255,0.6);
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    /* ===== COLORFUL SECTIONS ===== */
+    #formSection {
+      background: #f8bbd0; /* Pink */
+    }
+
+    #personal {
+      background: #bbdefb; /* Light Blue */
+    }
+
+    #skills {
+      background: #c8e6c9; /* Light Green */
+      text-align: left;
+    }
+
+    #hobbies {
+      background: #ffe082; /* Light Yellow */
+      text-align: left;
+    }
+
+    #contact {
+      background: #d1c4e9; /* Lavender */
+    }
+
+    /* ===== FORM ELEMENTS ===== */
+    input {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 2px solid #8e24aa;
+      width: 70%;
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #8e24aa;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #6a1b9a;
+    }
+
+    #output {
+      margin-top: 20px;
+      background: #f3e5f5;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      color: #4a148c;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* ===== LINKS ===== */
+    a {
+      color: #4a148c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #ab47bc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Welcome to My Personal Webpage</h1>
+    <p>Created by Akshari U Shankar 💜</p>
+  </header>
+
+  <!-- ===== INTERACTIVE FORM ===== -->
+  <section id="formSection">
+    <h2>Enter Your Details 👇</h2>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <input type="number" id="age" placeholder="Enter your age"><br>
+    <input type="email" id="email" placeholder="Enter your email"><br>
+    <input type="tel" id="contact" placeholder="Enter your contact number"><br>
+    <button onclick="showDetails()">Show My Details</button>
+
+    <div id="output"></div>
+  </section>
+
+  <!-- ===== PERSONAL DETAILS ===== -->
+  <section id="personal">
+    <h2>My Personal Details</h2>
+    <p><strong>Full Name:</strong> Akshari U Shankar</p>
+    <p><strong>Age:</strong> 19 years</p>
+    <p><strong>hometown:</strong> chikamagaluru</p>
+    <p><strong>blood group:</strong> o+</p>
+    <p><strong>Goal:</strong> i aim to live with purpose ,create with passion and inspire through everything i do. 🌸</p>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML, CSS & JavaScript</li>
+      <li>Web Page Design</li>
+      <li>Basic C Programming</li>
+      <li>Creative Thinking</li>
+      <li>Team Collaboration</li>
+    </ul>
+  </section>
+
+  <!-- ===== HOBBIES ===== -->
+  <section id="hobbies">
+    <h2>My Hobbies</h2>
+    <ul>
+      <li>Listening to music 🎧</li>
+      <li>Drawing and painting 🎨</li>
+      <li>Exploring new technologies 💻</li>
+      <li>Photography 📸</li>
+      <li>Reading short stories 📚</li>
+    </ul>
+  </section>
+
+  <!-- ===== CONTACT LINKS ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s connect!</p>
+    <p>
+      <a href="mailto:akshari@example.com">Email</a> |
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://github.com" target="_blank">GitHub</a>|
+      <a href="https://instagram.com"target="_blank">instagram</a>
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Akshari U Shankar | Made with 💖 and creativity</p>
+  </footer>
+
+  <!-- ===== JavaScript for Interactivity ===== -->
+  <script>
+    function showDetails() {
+      let name = document.getElementById("name").value;
+      let age = document.getElementById("age").value;
+      let email = document.getElementById("email").value;
+      let contact = document.getElementById("contact").value;
+
+      if (name === "" || age === "" || email === "" || contact === "") {
+        document.getElementById("output").innerHTML =
+          "<b style='color:red;'>Please fill in all details!</b>";
+      } else {
+        document.getElementById("output").innerHTML =
+          "<h3>Entered Details:</h3>" +
+          "<p><strong>Name:</strong> " + name + "</p>" +
+          "<p><strong>Age:</strong> " + age + "</p>" +
+          "<p><strong>Email:</strong> " + email + "</p>" +
+          "<p><strong>Contact:</strong> " + contact + "</p>" +
+          "<p style='color:#6a1b9a;'>Thanks for sharing your details, " + name + "! 💜</p>";
+      }
+    }
+  </script>
+</body>
+</html>
